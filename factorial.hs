@@ -2,10 +2,10 @@ module Main where
 
 import Text.Printf
 
-factorial :: Integer -> Integer
-factorial 0 = 1
-factorial n = n * factorial (n - 1)
+facAux 0 r = r
+facAux n r = facAux (n − 1) ( r ∗ n)
+facTail n = facAux n 1
 
-line x = printf "%d! = %d\n" x $ factorial x
+line x = printf "%d! = %d\n" x $ factTail x
 
-main = mapM_ line [0..16]
+main = mapM_ line [0..9]
