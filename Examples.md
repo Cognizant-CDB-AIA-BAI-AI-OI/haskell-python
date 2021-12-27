@@ -12,7 +12,7 @@ fac n | n==0  = 1
 ```
 
 #### Lists, enumerations, list comprehensions
-```
+```haskell 
 upto n = [1..n]
 fac' n = product [1..n]
 power2table n = [ power2 i | i<-[0..n] ]
@@ -22,7 +22,7 @@ isFactorOf f n = n `mod` f == 0
 primes n = [ p | p <- [1..n], factors p == [1,p] ]
 ```
 #### Anonymous / Lambda functions
-```
+```haskell 
 -- square x = x^2
 square = \ x -> x^2
 
