@@ -30,6 +30,10 @@ filter (\x -> x `mod` 2 == 1) [1, 2, 3, 4, 5, 6]
 -- square x = x^2
 square = \ x -> x^2
 
+-- Two parameters
+Prelude> (\x -> (\y -> x*y))  4 5
+20
+
 --sqlist' = map square [1..10]
 sqlist' = map (\x-> x^2) [1..10]
 
